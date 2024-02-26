@@ -5,7 +5,7 @@ import { BASE_URL, UPLOAD_URL, AI_URL } from "../constants";
 export const openaiApi = createApi({
   reducerPath: "openaiAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://diet-detective-ai-bot.onrender.com/",
+    baseUrl: BASE_URL,
   }),
   endpoints: (builder) => ({
     getModelResponse: builder.mutation({

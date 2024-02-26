@@ -1,13 +1,13 @@
 import express from "express";
 import router from "./src/routes/requestRoute.js";
 import uploadRouter from "./src/routes/uploadRoute.js";
-import cors from "cors";
+// import cors from "cors";
 import path from "path";
 
 const PORT = 5000;
 const app = express();
 
-app.use(cors({ origin: "https://diet-detective-ai-bot.onrender.com/" })); // Body parser middleware
+// app.use(cors({ origin: "https://diet-detective-ai-bot.onrender.com/" })); // Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
