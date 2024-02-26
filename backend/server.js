@@ -7,7 +7,7 @@ import path from "path";
 const PORT = 5000;
 const app = express();
 
-app.use(cors({ origin: "http://localhost:5173" })); // Body parser middleware
+app.use(cors({ origin: "*" })); // Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
