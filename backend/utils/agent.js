@@ -37,7 +37,7 @@ async function getImageDescription(imagePath) {
       "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-base",
       {
         headers: {
-          Authorization: "Bearer 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",
+          Authorization: `Bearer ${process.env.HUGGINGFACE_API_KEY}`,
         },
         method: "POST",
         body: data,
