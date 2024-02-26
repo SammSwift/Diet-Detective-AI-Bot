@@ -17,6 +17,7 @@ app.use("/api", router);
 const __dirname = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
+  console.log(__dirname);
   app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
   app.get("*", (req, res) =>
