@@ -1,13 +1,14 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { BASE_URL, UPLOAD_URL, AI_URL } from "../constants";
 
 // Define a service using a base URL and expected endpoints
 export const openaiApi = createApi({
   reducerPath: "openaiAPI",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000" }),
+  baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
   endpoints: (builder) => ({
     getModelResponse: builder.mutation({
       query: ({ input, restrictions, image }) => ({
-        url: `/api/ai-bot`,
+        url: AI_URL,
         method: "POST",
         body: { input, restrictions, image },
       }),
@@ -15,7 +16,7 @@ export const openaiApi = createApi({
 
     uploadFoodImage: builder.mutation({
       query: (data) => ({
-        url: "/api/upload",
+        url: UPLOAD_URL,
         method: "POST",
         body: data,
       }),

@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "proxy": "http://localhost:5000",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,6 +14,7 @@
     "@langchain/core": "^0.1.23",
     "@langchain/openai": "^0.0.14",
     "@reduxjs/toolkit": "^2.1.0",
+    "diet-detective": "file:..",
     "dotenv": "^16.4.1",
     "langchain": "^0.1.13",
     "react": "^18.2.0",
