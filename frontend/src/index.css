@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.cdnfonts.com/css/kromosius");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scroll-area {
+  width: 800px; /* Set the width of the scroll area */
+  height: 600px; /* Set the height of the scroll area */
+  overflow: auto; /* Enable scrolling */
+
+  scrollbar-width: thin; /* Specify the width of the scrollbar */
+  scrollbar-color: #888 transparent; /* Specify the color of the scrollbar */
+}
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  /* position: fixed; */
+}
+
+/* dark mode looking scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #121212;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #242424;
+}
