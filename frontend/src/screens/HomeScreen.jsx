@@ -26,7 +26,6 @@ const HomeScreen = () => {
     const uploadedFile = event.target.files[0];
     // Set image url for diaplaying in frontend
     setImageSrc(URL.createObjectURL(uploadedFile));
-    console.log(uploadedFile);
     const formData = new FormData();
     formData.append("image", uploadedFile);
     try {
