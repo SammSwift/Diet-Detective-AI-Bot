@@ -45,12 +45,12 @@ const WebCam = ({ setImageSrc, setTakePhoto, setImage, uploadFoodImage }) => {
     <>
       <Webcam
         ref={webcamRef}
-        className="relative md:w-[500px] md:h-[500px] w-[350px] h-[350px]"
+        className="relative md:w-[500px] md:h-[500px] w-[350px]"
       />
 
       <button
         onClick={capture}
-        className="absolute bottom-8 inset-x-0 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-30 text-white flex items-center justify-center gap-2 py-1 rounded-b-lg"
+        className="absolute -bottom-5 md:bottom-8 inset-x-0 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-30 text-white flex items-center justify-center gap-2 py-1 rounded-b-lg"
         videoConstraints={videoConstraints}
       >
         <FaCamera />
