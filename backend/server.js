@@ -1,5 +1,5 @@
 import express from "express";
-import { requestRouter } from "./src/routes/requestRoute.js";
+import requestRouter from "./src/routes/requestRoute.js";
 import uploadRouter from "./src/routes/uploadRoute.js";
 // import cors from "cors";
 import path from "path";
