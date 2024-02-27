@@ -5,6 +5,7 @@ import {
 } from "../features/apiSlice.js";
 import SideBar from "../components/SideBar.jsx";
 import ai_bot from "../assets/floating-robot_78370-3669.avif";
+import avatar from "../assets/man.png";
 import WebCam from "../components/WebCam.jsx";
 import { toast } from "react-toastify";
 
@@ -119,14 +120,14 @@ const HomeScreen = () => {
           </div>
 
           <div className="relative mx-2">
-            <div className="absolute -top-10 rounded-lg inset-x-0 bg-gray-500 p-3">
-              <span className="text-white text-lg font-blackops font-light">
-                Chat with DD Bot
+            <div className="absolute -top-7 rounded-b-0 rounded-t-lg inset-x-0 bg-gray-500 text-center">
+              <span className="text-white text-lg font-blackops">
+                Chat with DD AI Bot
               </span>
             </div>
             <div
               ref={scrollAreaRef}
-              className="rounded-lg overflow-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 mb-20 p-3 min-w-[300px]  md:max-w-[700px] md:min-w-[700px] md:h-[600px]"
+              className="rounded-t-0 rounded-b-lg overflow-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 mb-20 p-3 min-w-[350px]  md:max-w-[700px] md:min-w-[700px] md:h-[600px]"
             >
               {chatMessages.map((message, index) => (
                 <div
@@ -140,7 +141,7 @@ const HomeScreen = () => {
                       {message.sender === "ai" ? (
                         <img alt="avatar" src={ai_bot} />
                       ) : (
-                        <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        <img src={avatar} />
                       )}
                     </div>
                   </div>
@@ -176,8 +177,8 @@ const HomeScreen = () => {
               type="text"
               value={humanMsg}
               onChange={(e) => setHumanMsg(e.target.value)}
-              placeholder="Send a Message..."
-              className="input input-bordered fixed bottom-3 rounded-xl md:w-[700px] bg-gray-700 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40"
+              placeholder="Message DD Bot..."
+              className="input input-bordered fixed bottom-3 rounded-2xl md:w-[700px] bg-gray-700 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40 w-[370px]"
             />
           </form>
         </div>

@@ -1,5 +1,5 @@
 import express from "express";
-import router from "./src/routes/requestRoute.js";
+import { requestRouter } from "./src/routes/requestRoute.js";
 import uploadRouter from "./src/routes/uploadRoute.js";
 // import cors from "cors";
 import path from "path";
@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/upload", uploadRouter);
-app.use("/api", router);
+app.use("/api", requestRouter);
 
 const __dirname = path.resolve();
 

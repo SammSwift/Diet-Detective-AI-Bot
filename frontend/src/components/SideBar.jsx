@@ -1,5 +1,6 @@
 import { GiHamburgerMenu } from "react-icons/gi";
-// eslint-disable-next-line react/prop-types
+import { FaCamera } from "react-icons/fa";
+
 const SideBar = ({ imageHandler, setDietaryRestrictions, takePhoto }) => {
   return (
     <div className="drawer lg:drawer-open relative">
@@ -29,9 +30,10 @@ const SideBar = ({ imageHandler, setDietaryRestrictions, takePhoto }) => {
             </span>
           </div>
           <button
-            className="btn bg-transparent border-orange-800 text-white mb-3"
+            className="btn bg-transparent border-orange-800 text-white mb-3 hover:bg-transparent hover:border-orange-800"
             onClick={() => takePhoto(true)}
           >
+            <FaCamera />
             Snap Food Image
           </button>
           <input

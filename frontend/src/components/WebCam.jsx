@@ -1,5 +1,6 @@
 import Webcam from "react-webcam";
 import { useRef, useCallback } from "react";
+import { FaCamera } from "react-icons/fa6";
 
 const WebCam = ({ setImageSrc, setTakePhoto, setImage, uploadFoodImage }) => {
   const webcamRef = useRef(null);
@@ -36,14 +37,23 @@ const WebCam = ({ setImageSrc, setTakePhoto, setImage, uploadFoodImage }) => {
     }
   }, [webcamRef]);
 
+  const videoConstraints = {
+    facingMode: { exact: "environment" },
+  };
+
   return (
     <>
-      <Webcam height={500} width={500} ref={webcamRef} className="relative" />
+      <Webcam
+        ref={webcamRef}
+        className="relative md:w-[500px] md:h-[500px] w-[350px] h-[350px]"
+      />
 
       <button
         onClick={capture}
-        className="absolute -bottom-5 inset-x-0 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 text-white"
+        className="absolute bottom-8 inset-x-0 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-30 text-white flex items-center justify-center gap-2 py-1 rounded-b-lg"
+        videoConstraints={videoConstraints}
       >
+        <FaCamera />
         Capture Food Image
       </button>
     </>
